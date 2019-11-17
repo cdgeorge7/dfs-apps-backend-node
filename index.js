@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 
 const routes = require("./routes");
 
@@ -12,6 +13,6 @@ app.get("/", (req, res) => {
 });
 app.use("/", routes);
 
-PORT = process.env.PORT || 5000;
+PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
